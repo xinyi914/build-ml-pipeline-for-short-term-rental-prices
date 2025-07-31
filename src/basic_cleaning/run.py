@@ -33,8 +33,8 @@ def go(args):
     idx = df['price'].between(args.min_price,args.max_price)
     df = df[idx].copy()
 
-    logger.info("Dropping null values")
-    df = df.dropna()
+    # logger.info("Dropping null values")
+    # df = df.dropna()
 
     logger.info("Saving cleaned dataset to W&B")
     df.to_csv("clean_sample.csv",index=False)
